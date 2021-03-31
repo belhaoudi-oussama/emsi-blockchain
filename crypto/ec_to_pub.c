@@ -17,7 +17,7 @@ uint8_t *ec_to_pub(EC_KEY const *key, uint8_t pub[EC_PUB_LEN])
 	if(!(EC_POINT_point2oct(group,pubPnt,POINT_CONVERSION_UNCOMPRESSED,pub,EC_PUB_LEN,NULL)))
 	{
 
-		fprintf(stderr, "poin2bn does not work\n");
+		fprintf(stderr, "poin2bn faild\n");
 		return NULL;
 
 	}
