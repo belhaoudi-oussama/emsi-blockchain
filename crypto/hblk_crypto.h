@@ -1,10 +1,13 @@
-# include <stdint.h>
+#ifndef HCRYPTO_H
+#define HCRYPTO_H
+
+#include <stdint.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <sys/types.h>
 #include <sys/stat.h>
-# include <openssl/sha.h>
+#include <openssl/sha.h>
 #include <openssl/ec.h>
 #include <openssl/pem.h>
 #include <openssl/obj_mac.h>
@@ -25,7 +28,6 @@
 	
 #else
 	# define PATH_MAX 4096
-	# define OS 2
 
 #endif
 
@@ -52,3 +54,5 @@ int ec_save(EC_KEY *key, char const *folder);
 EC_KEY *ec_load(char const *folder);
 uint8_t *ec_sign(EC_KEY const *key, uint8_t const *msg, size_t msglen, sig_t *sig);
 int ec_verify(EC_KEY const *key, uint8_t const *msg, size_t msglen, sig_t const *sig);
+
+#endif

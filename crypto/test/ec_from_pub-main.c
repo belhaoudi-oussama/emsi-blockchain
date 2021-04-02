@@ -37,7 +37,6 @@ int main(void)
 
     /* Test `ec_from_pub()` */
     key2 = ec_from_pub(pub);
-    fprintf(stderr, "-----------------------------------------1\n");
     if (!key2)
     {
         fprintf(stderr, "ec_from_pub() failed\n");
