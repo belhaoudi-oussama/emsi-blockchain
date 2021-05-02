@@ -3,3 +3,6 @@
 alex
 *.o
 *.a
+*-test
+*ignor
+*.hblk
